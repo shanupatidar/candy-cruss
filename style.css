@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.score-box {
+  background: rgba(0,0,0,0.25);
+  padding: 8px 20px;
+  border-radius: 10px;
+  min-width: 100px;
+}
+
+.score-box span {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.score-box h2 {
+  font-size: 1.5rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 12px;
+  margin: 0 auto 20px auto;
+}
+
+.tile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: inset -4px -4px 8px rgba(0,0,0,0.3), inset 4px 4px 8px rgba(255,255,255,0.4);
+}
+
+.tile:hover {
+  transform: scale(1.08);
+}
+
+.tile.selected {
+  outline: 3px solid #ffffff;
+  transform: scale(1.15);
+  z-index: 2;
+}
+
+/* Candy Colors */
+.candy-red    { background: radial-gradient(circle at 35% 35%, #ff6b6b, #c0392b); }
+.candy-blue   { background: radial-gradient(circle at 35% 35%, #4ea8de, #2980b9); }
+.candy-green  { background: radial-gradient(circle at 35% 35%, #51cf66, #27ae60); }
+.candy-yellow { background: radial-gradient(circle at 35% 35%, #fcc419, #f39c12); }
+.candy-purple { background: radial-gradient(circle at 35% 35%, #cc5de8, #8e44ad); }
+
+#reset-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.2s;
+}
+
+#reset-btn:hover {
+  background: #ff6b81;
+}
